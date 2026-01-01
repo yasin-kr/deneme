@@ -1,0 +1,221 @@
+/* LAYOUT AND CONTAINERS */
+.reviews-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reviews-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -1.12px;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+/* REVIEW CARD COMPONENT */
+.reviews-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.review-card {
+  background-color: transparent;
+  border: 1px solid #ffffff33; /* Light transparent white border */
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+/* Card Header (Avatar + Info) */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Profile Picture */
+.review-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e0e0e0;
+}
+
+.review-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 0.83;
+  letter-spacing: 0px;
+  margin-bottom: 4px;
+}
+
+.review-role {
+  font-size: 12px;
+  color: #ffffff80; /* 50% opaque white */
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.24px;
+}
+/* Name and Role Area (flex item) */
+.review-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+/* RATING STARS */
+.stars-container {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+/* Star SVG Settings */
+.review-star {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: currentColor;
+  color: var(--brown);
+}
+/* Last Star (Empty/Gray Look) */
+.stars-container .review-star:last-child {
+  filter: grayscale(100%) brightness(0.5);
+  opacity: 0.6;
+}
+/* OTHER CONTENT AND UTILITY CLASSES */
+.review-text {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+  letter-spacing: -0.28px;
+}
+/* Hide on mobile (Visible on Tablet/Desktop) */
+.hidden-on-mobile {
+  display: none;
+}
+/* INTERACTIVITY AND ANIMATIONS */
+.review-card:hover {
+  border-color: var(--brown); /* Border changes to brand color */
+  transform: translateY(-5px); /* Lifts the card up by 5px (3D effect) */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.03
+  ); /* Slight background brightening */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Adds shadow underneath */
+}
+/* FOCUS STATE: On keyboard navigation (Tab key) */
+.review-card:focus {
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(190, 166, 158, 0.3);
+}
+/* ACTIVE STATE: When clicked/pressed */
+.review-card:active {
+  transform: scale(0.98) translateY(-2px);
+  border-color: #ffffff66;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* TABLET DESIGN */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .reviews-title {
+    font-size: 48px;
+    margin-bottom: 0;
+    margin-left: 24px;
+  }
+  .review-card {
+    max-width: 640px; /* Limits card width */
+    margin: 48px;
+  }
+  .review-header {
+    align-items: flex-start;
+    width: 100%;
+  }
+  /* Info box (Name + Role + Stars) */
+  .review-info {
+    flex-grow: 1;
+    position: relative;
+    display: block;
+    margin-top: 0;
+    padding-top: 4px;
+  }
+
+  .review-name {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 6px;
+    padding-right: 100px;
+  }
+
+  .review-role {
+    font-size: 16px;
+  }
+  /* Pinning stars to the top right corner (Absolute) */
+  .stars-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+  }
+  .review-star {
+    width: 20px;
+    height: 20px;
+  }
+  .review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 16px;
+  }
+}
+/* DESKTOP DESIGN */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 64px;
+    margin: 0 auto;
+  }
+  .reviews-section {
+    max-width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+  .reviews-title {
+    font-size: 48px;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+  .reviews-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hidden-on-mobile {
+    display: block; /* Reveals the second review card */
+  }
+  .review-card {
+    margin: 0;
+    max-width: none;
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

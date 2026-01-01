@@ -1,44 +1,220 @@
-.header {
-  padding: 20px 0;
+.container {
+  max-width: 100%;
 }
-.nav {
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
+  gap: 14px;
+}
+
+.nav-manage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  background-color: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px 21px;
+  color: white;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.nav-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  gap: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
   justify-content: center;
 }
-.nav-list {
-  display: flex;
+
+.menu-btn {
+  color: white;
+  cursor: pointer;
+}
+
+.header-signup-btn {
+  display: none;
+  border-radius: 12px;
+  background-color: white;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  padding: 16px 58px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--black);
 }
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+
+.signup-btn:hover,
+.signup-btn:focus {
+  background-color: var(--black);
+  color: var(--brown);
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+.cam-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--brown);
+  opacity: 0.4;
 }
-.nav-link::after {
-  content: '';
+
+.icon-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black2);
+  border-radius: 50%;
+}
+
+.icon-wrap:hover .cam-icon,
+.icon-wrap:focus .cam-icon {
+  opacity: 1;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #12121266;
+  z-index: 1000;
+}
+
+.is-open {
+  display: flex;
+}
+
+.test {
+  width: 200px;
+}
+
+.header-menu {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  top: 0;
+  right: 0;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.menu-content {
+  background-color: var(--brown);
+  padding-left: 20px;
+  padding-top: 180px;
+  padding-bottom: 133px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+}
+
+.menu li:hover,
+.menu li:focus {
+  font-weight: 700;
+}
+
+.cross {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-bottom: 40px;
+  }
+
+  .camera-btn {
+    display: none;
+  }
+
+  .signup-btn {
+    display: inline-flex;
+    border-radius: 12px;
+    padding: 16px 84px;
+    width: 239px;
+    height: 60px;
+  }
+
+  .nav-manage {
+    padding: 16px 20px;
+  }
+
+  .nav-icon {
+    width: 40px;
+    height: 28px;
+  }
+
+  .bigcam {
+    width: 480px;
+
+    height: auto;
+    display: block;
+  }
+
+  .menu-content {
+    padding-left: 64px;
+    padding-top: 232px;
+    padding-bottom: 114px;
+  }
+}
+
+@media (min-width: 1280px) {
+  header {
+    padding-bottom: 80px;
+  }
+
+  .is-open {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .nav-manage {
+    padding: 22px 50px;
+  }
 }

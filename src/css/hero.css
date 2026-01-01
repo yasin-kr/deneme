@@ -1,0 +1,296 @@
+:root {
+  --black: #121212;
+  --black2: #1d1d1d;
+  --black3: #060707;
+  --brown: #bea69e;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 64px;
+  }
+}
+
+/* Hero Wrapper */
+
+.hero-container {
+  background-color: var(--black2);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/background@2.png");
+  }
+}
+
+/* Hero Card */
+.hero {
+  background-color: var(--black);
+  background-image: url("../images/background.png");
+  padding: 90px 20px 40px;
+  min-width: 320px;
+}
+
+/* Hero Content */
+.hero-content {
+  padding-top: 40px;
+  max-width: 520px;
+  width: 100%;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  font-style: italic;
+  font-weight: 400;
+  color: #bea69e;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+/* Reviews Block */
+.hero-reviews {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+/* Left (avatars) */
+.hero-reviews-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--black2);
+}
+
+.hero-avatars .avatar:not(:first-child) {
+  margin-left: -12px;
+}
+
+.avatar-1 {
+  z-index: 3;
+}
+
+.avatar-2 {
+  z-index: 2;
+}
+
+.avatar-3 {
+  z-index: 1;
+}
+
+.hero-avatars img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Happy students link */
+.hero-avatars-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero-avatars-text:hover,
+.hero-avatars-text:focus {
+  text-decoration: underline;
+}
+
+/* Right Reviews */
+.hero-reviews-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-reviews-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-reviews-star {
+  fill: none;
+}
+
+.hero-reviews-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-label {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reviews-number {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: -0.04em;
+  color: var(--white);
+}
+
+/* Hero Image */
+
+.hero-img {
+  max-width: 259px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 100%;
+    padding: 120px 32px;
+  }
+  .hero-content {
+    width: 520px;
+    padding-top: 64px;
+  }
+  .hero-title {
+    font-size: 60px;
+  }
+  .hero-text {
+    max-width: 450px;
+  }
+  .hero-reviews-left {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+  .hero-avatars-text {
+    font-size: 16px;
+  }
+  .reviews-label {
+    font-size: 16px;
+  }
+
+  .hero-img {
+    max-width: 397px;
+    height: auto;
+  }
+}
+
+/* Dekstop */
+@media screen and (min-width: 1280px) {
+  .hero {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    padding: 160px 100px;
+  }
+  .hero-container {
+    padding-left: 50px;
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 520px;
+  }
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-reviews {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  .hero-image-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
+
+  .hero-img {
+    max-width: 397px;
+    height: auto;
+  }
+}

@@ -1,0 +1,75 @@
+<body>
+  <section class="signup-section" id="signup">
+    <div class="signup-container">
+      <div class="signup-content">
+        <h2 class="signup-title">Sign <span>Up</span></h2>
+        <p class="signup-description">
+          Please use the form below to contact us. Enter your name, email, and
+          message and we'll get back to you shortly.
+        </p>
+
+        <form class="signup-form" name="contact-form" autocomplete="off">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="user-name"
+              class="signup-input"
+              placeholder="Enter your name"
+              required
+              pattern="[a-zA-Z\s]{2,}"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <input
+              type="email"
+              name="user-email"
+              class="signup-input"
+              placeholder="Enter your email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <textarea
+              name="user-message"
+              class="signup-textarea"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="signup-btn">SEND</button>
+
+          <p class="privacy-text">
+            By clicking on "Send" button, you agree to our
+            <a href="#" class="privacy-link">Privacy Policy</a>, and allow
+            Promodo to use this information for marketing purposes.
+          </p>
+        </form>
+      </div>
+
+      <div class="signup-images">
+        <div class="image-wrapper lens-wrapper">
+          <img
+            src="../images/camera-1.png"
+            alt="Camera Lens"
+            class="camera-img"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="image-wrapper camera-wrapper">
+          <img
+            src="../images/camera-2.png"
+            srcset="../images/camera-2.png 1x, ../images/camera-2@2x.png 2x"
+            alt="Professional Camera"
+            class="camera-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

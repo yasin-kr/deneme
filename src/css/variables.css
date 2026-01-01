@@ -1,0 +1,32 @@
+:root {
+  --black: #121212;
+  --black2: #1d1d1d;
+  --black3: #060707;
+  --brown: #bea69e;
+  --white: #fff;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 64px;
+  }
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+}
