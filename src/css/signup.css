@@ -1,18 +1,5 @@
-:root {
-  --black: #121212;
-  --black2: #1d1d1d;
-  --black3: #060707;
-  --brown: #bea69e;
-  --white: #fff;
-}
-
-.container {
-  max-width: 320px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
 .signup-section {
-  background-color: var(--black3);
+  background-color: var(--black);
   padding: 80px 0;
   overflow: hidden;
   font-family: 'DM Sans', sans-serif;
@@ -210,7 +197,8 @@
     transform: translateX(-50%) rotate(-90deg);
     filter: drop-shadow(-36px 18px 25px #00000042);
     position: relative;
-    left: 40%;
+    top: 10%;
+    left: 50%;
   }
   /* --- Right Large Camera Image --- */
   .camera-wrapper {

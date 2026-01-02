@@ -1,7 +1,8 @@
 <body>
   <!-- ADVERTISEMENT  -->
   <section class="adv">
-    <div class="container adv-container">
+    <div class="container ">
+      <div class="adv-container">
       <div class="marquee">
         <div class="marquee__inner">
           <p class="marquee__line">
@@ -21,21 +22,20 @@
 
   <!-- ABOUT -->
   <section id="about" class="about">
-    <div class="container about-container">
+    <div class="container ">
+      <div class="about-container">
       <h2 class="about-title">About <span class="about-highlight">Us</span></h2>
 
       <div class="about-wrapper">
         <!-- FOTOĞRAF -->
         <div class="about-thumb">
-          <picture>
-            <source srcset="../images/camera@2.jpg" />
-            <img
-              src="../images/camera.jpg"
-              alt="Photography equipment"
-              class="about-img"
-              loading="lazy"
-            />
-          </picture>
+          <img
+            src="../images/camera.jpg"
+            srcset="../images/camera.jpg 1x, ../images/camera@2x.jpg 2x"
+            alt="Photography equipment"
+            class="about-img"
+            loading="lazy"
+          />
         </div>
 
         <!-- METİN -->
@@ -57,13 +57,9 @@
             learn the technical aspects of photography, discover your own style
             and develop your own visual language.
           </p>
-
-          <div class="about-icon-box">
-            <svg class="about-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-arrow"></use>
-            </svg>
-          </div>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   </section>

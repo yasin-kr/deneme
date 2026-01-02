@@ -2,9 +2,12 @@
   background-color: var(--black);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 64px 0;
   text-align: center;
-  padding: 64px 0;
+  min-width: 320px;
+}
+
+.adv-container {
+  max-width: 100%;
 }
 
 .adv-title {
@@ -39,7 +42,7 @@
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 59px;
   text-transform: uppercase;
   background-color: var(--black);
 }
@@ -50,8 +53,8 @@
 
 .marquee__line {
   flex-shrink: 0;
-  margin: 0;
-  padding: 10px 15px;
+  margin: 0 auto;
+  padding: 24px 15px;
   min-width: 100%;
   white-space: nowrap;
   animation-name: marqueeLine;

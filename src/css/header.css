@@ -1,4 +1,4 @@
-.container {
+header .container {
   max-width: 100%;
 }
 
@@ -24,7 +24,7 @@ nav {
   background-color: var(--black);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  padding: 15px 21px;
+  padding: 15px 20px;
   color: white;
   height: 60px;
 }
@@ -95,7 +95,7 @@ nav {
 
 .icon-wrap:hover .cam-icon,
 .icon-wrap:focus .cam-icon {
-  opacity: 1;
+  fill: var(--brown);
 }
 
 .nav-icon {
@@ -165,7 +165,7 @@ nav {
     display: none;
   }
 
-  .signup-btn {
+  .header-signup-btn {
     display: inline-flex;
     border-radius: 12px;
     padding: 16px 84px;
@@ -197,10 +197,6 @@ nav {
 }
 
 @media (min-width: 1280px) {
-  header {
-    padding-bottom: 80px;
-  }
-
   .is-open {
     display: none;
   }

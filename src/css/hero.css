@@ -1,75 +1,29 @@
-:root {
-  --black: #121212;
-  --black2: #1d1d1d;
-  --black3: #060707;
-  --brown: #bea69e;
-  --white: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-body {
-  font-family: "DM Sans", sans-serif;
-}
-
-.container {
-  max-width: 320px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    padding: 0 64px;
-  }
-}
-
 /* Hero Wrapper */
 
+section .container {
+  max-width: 100%;
+}
+
+.hero {
+  padding-bottom: 100px;
+}
 .hero-container {
   background-color: var(--black2);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   border-radius: 30px;
   min-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-@media (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../images/background@2.png");
-  }
-}
-
-/* Hero Card */
-.hero {
-  background-color: var(--black);
-  background-image: url("../images/background.png");
-  padding: 90px 20px 40px;
-  min-width: 320px;
+.hero-inner {
+  padding: 40px 20px 0;
 }
 
 /* Hero Content */
 .hero-content {
-  padding-top: 40px;
-  max-width: 520px;
   width: 100%;
+  max-width: 520px;
+  padding-bottom: 40px;
 }
 
 .hero-title {
@@ -84,7 +38,7 @@ body {
 .hero-title span {
   font-style: italic;
   font-weight: 400;
-  color: #bea69e;
+  color: var(--brown);
 }
 
 .hero-text {
@@ -100,7 +54,6 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  padding-top: 20px;
 }
 
 /* Left (avatars) */
@@ -213,6 +166,7 @@ body {
   max-width: 259px;
   height: auto;
   object-fit: contain;
+  margin-top: 20px;
 }
 
 .hero-image-wrap {
@@ -222,12 +176,7 @@ body {
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-  .hero {
-    width: 100%;
-    height: 100%;
-    padding: 120px 32px;
-  }
-  .hero-content {
+  .hero-inner {
     width: 520px;
     padding-top: 64px;
   }
@@ -252,17 +201,12 @@ body {
   .hero-img {
     max-width: 397px;
     height: auto;
+    margin-top: 40px;
   }
 }
 
 /* Dekstop */
 @media screen and (min-width: 1280px) {
-  .hero {
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    padding: 160px 100px;
-  }
   .hero-container {
     padding-left: 50px;
     position: relative;

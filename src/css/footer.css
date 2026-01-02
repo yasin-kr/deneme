@@ -1,42 +1,38 @@
-/*General Footer Area  */
-.the-end *,
-.the-end *::before,
-.the-end *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.the-end {
-  width: 100%;
-  background: radial-gradient(circle at top, #1b1b1b, #0b0b0b);
-  font-family: 'DM Sans', sans-serif;
-  color: #fff;
-}
-
 /* Container */
+footer .container {
+  max-width: 100%;
+}
+
 .footer-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 42px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 32px;
 }
 
+.phone {
+  padding-bottom: 10px;
+}
 /* Logo */
-.footer-logo .logo {
+.footer-logo {
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 12px;
 }
 
-.footer-logo a,
+.footer-logo .logo {
+  padding-bottom: 16px;
+}
+
+.phone,
 .footer-logo p {
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
   text-decoration: none;
   color: #fff;
 }
@@ -44,8 +40,10 @@
 /* Footer Menuss */
 .footer-menus {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 32px;
+  color: #fff;
 }
 
 .footer-links {
@@ -131,16 +129,17 @@
   align-items: flex-start;
   font-size: 14px;
   line-height: 18px;
+  color: var(--white);
 }
 
-.agreement {
+.agreement p {
   display: flex;
   flex-direction: column;
   gap: 0;
+  color: var(--white);
 }
 
 .agreement a {
-  text-transform: uppercase;
   color: #fff;
   text-decoration: none;
 }
@@ -196,9 +195,9 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .the-end {
-    height: 331px;
+@media (min-width: 768px) and (max-width: 1280px) {
+  .footer-logo .logo {
+    padding-bottom: 25px;
   }
 
   .footer-container {
@@ -212,7 +211,7 @@
 
   .footer-menus {
     grid-column: 2 / 3;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .form-field {
@@ -259,7 +258,7 @@
 /* Desktop */
 @media (min-width: 1200px) {
   .footer-container {
-    padding: 60px 80px;
+    padding: 50px 80px;
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr auto;
     column-gap: 48px;

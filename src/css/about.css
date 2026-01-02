@@ -1,10 +1,8 @@
-/* =========================
-   ABOUT SECTION – BASE
-========================= */
-
 .about {
-  padding-top: 120px; /* Advertisement ile arayı açtık (Figma uyumlu) */
+  padding-top: 80px;
   padding-bottom: 80px;
+  background-color: var(--black);
+  min-width: 320px;
 }
 
 .about-container {
@@ -17,44 +15,41 @@
   font-size: 48px;
   font-weight: 500;
   margin-bottom: 60px;
+  color: var(--white);
 }
 
 .about-highlight {
   color: var(--brown);
 }
 
-/* =========================
-   DESKTOP LAYOUT (≥1280px)
-   Figma birebir
-========================= */
-
 .about-wrapper {
   display: flex;
-  align-items: flex-start; /* resim ve yazılar üstten hizalı */
-  gap: 40px; /* Figma gap */
+  align-items: flex-start;
+  gap: 40px;
 }
 
-/* IMAGE – CAPSULE (FIGMA: 488 x 260) */
 .about-thumb {
-  width: 488px;
-  height: 260px;
-  border-radius: 1000px;
+  max-width: 320px;
+  aspect-ratio: 2 / 1;
+  border-radius: 999px;
   overflow: hidden;
   flex-shrink: 0;
+  background-color: var(--brown);
 }
 
 .about-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-/* TEXT – 2 COLUMNS */
 .about-text-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  flex: 1; /* kalan alanı doldurur */
+  flex: 1;
 }
 
 .about-description {
@@ -62,18 +57,6 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
 }
-
-/* ICON */
-.about-icon-box {
-  grid-column: span 2;
-  margin-top: 24px;
-}
-
-/* =========================
-   TABLET (≤1024px)
-   Resim üstte, yazılar altta
-========================= */
-
 @media screen and (max-width: 1024px) {
   .about-wrapper {
     flex-direction: column;
@@ -84,15 +67,10 @@
   }
 
   .about-text-content {
-    grid-template-columns: 1fr 1fr; /* tablet: yazılar yan yana */
+    grid-template-columns: 1fr 1fr;
     width: 100%;
   }
 }
-
-/* =========================
-   MOBILE (≤768px)
-   Her şey alt alta
-========================= */
 
 @media screen and (max-width: 768px) {
   .about-title {
@@ -101,12 +79,13 @@
   }
 
   .about-thumb {
-    width: 100%;
+    width: 280px;
     height: 220px;
+    margin: 0 auto 40px;
   }
 
   .about-text-content {
-    grid-template-columns: 1fr; /* yazılar alt alta */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 

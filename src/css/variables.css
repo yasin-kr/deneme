@@ -8,7 +8,7 @@
 
 .container {
   max-width: 320px;
-  padding: 0 16px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -24,9 +24,25 @@
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding: 0 64px;
+    padding: 0 100px;
   }
 }
 body {
   font-family: 'DM Sans', sans-serif;
+}
+
+.background {
+  background-color: var(--black);
+  background-image: url('../images/background.png');
+  min-width: 320px;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../images/background@2x.png');
+  }
+}
+
+section {
+  width: 100%;
 }
