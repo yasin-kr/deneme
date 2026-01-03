@@ -1,8 +1,3 @@
-import { defineConfig } from 'vite';
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
-import SortCss from 'postcss-sort-media-queries';
-
 export default defineConfig(({ command }) => ({
   base: './',
 
@@ -16,6 +11,10 @@ export default defineConfig(({ command }) => ({
     sourcemap: true,
     outDir: '../dist',
     emptyOutDir: true,
+
+    rollupOptions: {
+      external: ['fsevents'],
+    },
   },
 
   plugins: [
